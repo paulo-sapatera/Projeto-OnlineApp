@@ -1,0 +1,24 @@
+<table class="container-list" >
+
+  <thead class="titulo">
+    <th>Tarefas Pendentes</th>
+  </thead>
+
+
+  <tbody class="corpo">
+      <tr class="list-group" *ngFor="let adicionando of adicionandos">
+        <div class="div-info"><td class="texto">{{adicionando.nomeDaTarefa}}</td></div>
+          <div class="div-button">
+        <td class="data">{{adicionando.data | date: 'short'}}</td>
+        <span class="material-icons" (click)="concluir(adicionando.id)">done_outline</span>
+        <a class="material-icons" routerLink="update/{{adicionando.id}}" >edit</a>
+        <span class="material-icons" (click)="deletar(adicionando.id)">delete</span>
+          </div>
+      </tr>
+  </tbody>
+
+</table>
+
+
+
+

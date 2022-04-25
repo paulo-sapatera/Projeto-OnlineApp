@@ -1,0 +1,21 @@
+<section class="container-update">
+  <button class="button-cancel" (click)="cancel()">X</button>
+  <article class="content">
+    <form (ngSubmit)="updateTask()">
+        <input
+        type="text"
+        class="form-control"
+        name="title"
+        [(ngModel)]="task.nomeDaTarefa"
+        placeholder="Título da Tarefa"
+        autofocus
+      />
+       <input
+        mat-raised-button
+        type="submit"
+        value="salvar"
+        class="btn btn-primary"
+      />
+    </form>
+  </article>
+</section>
